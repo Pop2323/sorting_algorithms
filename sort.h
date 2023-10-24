@@ -25,7 +25,7 @@ void print_list(const listint_t *list);
 /*Auxiliary functions*/
 void swap(int *arr, int idx1, int idx2);
 listint_t *create_listint(const int *array, size_t size);
-void swap_list(listint_t *pn, listint_t *temp, listint_t *nxt, listint_t **h);
+void swap_list(listint_t *ps, listint_t *temp, listint_t *nt, listint_t **h);
 
 /*Sorting Algorithms and Big O*/
 void bubble_sort(int *array, size_t size);
