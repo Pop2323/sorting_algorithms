@@ -52,7 +52,7 @@ void insertion_sort_list(listint_t **list)
  * @temp: current or temp value
  * @nt: next node
  * @h: thr head of list
-*/ 
+*/
 void swap_list(listint_t *ps, listint_t *temp, listint_t *nt, listint_t **h)
 {
 	while (ps && temp && ps->n > temp->n)
@@ -70,5 +70,5 @@ void swap_list(listint_t *ps, listint_t *temp, listint_t *nt, listint_t **h)
 		if ((*h)->prev)
 			*h = (*h)->prev;
 		print_list(*h);
-    }
+	}
 }
