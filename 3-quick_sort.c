@@ -1,11 +1,11 @@
 #include "sort.h"
 
 /**
- * swap - Swaps two integers
+ * swap_q - Swaps two integers
  * @a: Pointer to the first integer
  * @b: Pointer to the second integer
  */
-void swap_qk(int *a, int *b)
+void swap_q(int *a, int *b)
 {
 	int temp = *a;
 	*a = *b;
@@ -32,14 +32,14 @@ int lomuto_partition(int *array, int low, int high, size_t size)
 			i++;
 			if (i != j)
 			{
-				swap_qk(&array[i], &array[j]);
+				swap_q(&array[i], &array[j]);
 				print_array(array, size);
 			}
 		}
 	}
 	if (i + 1 != high)
 	{
-		swap_qk(&array[i + 1], &array[high]);
+		swap_q(&array[i + 1], &array[high]);
 		print_array(array, size);
 	}
 	return (i + 1);
