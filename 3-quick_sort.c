@@ -27,12 +27,12 @@ int lomuto_partition(int *array, int low, int high, size_t size)
 			}
 		}
 	}
-    if (i + 1 != high)
-    {
-        swap_quick(&array[i + 1], &array[high]);
-        print_array(array, size);
-    }
-    return (i + 1);
+	if (i + 1 != high)
+	{
+		swap_quick(&array[i + 1], &array[high]);
+		print_array(array, size);
+	}
+	return (i + 1);
 }
 
 /**
@@ -67,7 +67,7 @@ void quick_sort(int *array, size_t size)
 }
 
 /**
- * swap - Swaps two integers
+ * swap_quick - Swaps two integers
  * @a: Pointer to the first integer
  * @b: Pointer to the second integer
  */
