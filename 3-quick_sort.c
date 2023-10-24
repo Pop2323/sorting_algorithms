@@ -1,6 +1,16 @@
 #include "sort.h"
 
-void swap_quick(int *a, int *b);
+/**
+ * swap - Swaps two integers
+ * @a: Pointer to the first integer
+ * @b: Pointer to the second integer
+ */
+void swap_qk(int *a, int *b)
+{
+	int temp = *a;
+	*a = *b;
+	*b = temp;
+}
 
 /**
  * lomuto_partition - Perform Lomuto partition scheme
@@ -22,14 +32,14 @@ int lomuto_partition(int *array, int low, int high, size_t size)
 			i++;
 			if (i != j)
 			{
-				swap_quick(&array[i], &array[j]);
+				swap_qk(&array[i], &array[j]);
 				print_array(array, size);
 			}
 		}
 	}
 	if (i + 1 != high)
 	{
-		swap_quick(&array[i + 1], &array[high]);
+		swap_qk(&array[i + 1], &array[high]);
 		print_array(array, size);
 	}
 	return (i + 1);
@@ -64,16 +74,4 @@ void quick_sort(int *array, size_t size)
 	if (array == NULL || size < 2)
 		return;
 	quicksort_recursive(array, 0, (int)size - 1, size);
-}
-
-/**
- * swap_quick - Swaps two integers
- * @a: Pointer to the first integer
- * @b: Pointer to the second integer
- */
-void swap_quick(int *a, int *b)
-{
-	int temp = *a;
-	*a = *b;
-	*b = temp;
 }
